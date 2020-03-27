@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,700|Lato:300,400|Roboto+Mono&display=swap");
+$bg-color: #edf7f7;
+$bg-color-light: #fafffc;
+$primary: #020061;
+$secondary: #b6b5e8;
+$btn-color: #c3c7eb;
+$author-color: #0500ff;
+$quote-color: #7c7bad;
+$copyright: #17163d;
+$primary-font: "EB Garamond", serif;
+$secondary-font: "Lato", sans-serif;
+$tertiary-font: "Roboto Mono", monospace;
+
+$bp-largest: 75em; // 1200px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 25em;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  color: $primary;
+}

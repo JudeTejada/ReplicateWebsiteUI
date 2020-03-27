@@ -1,0 +1,22 @@
+.btn {
+  padding: 1.8rem 10rem;
+  border: none;
+  font-family: $tertiary-font;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  color: $primary;
+
+  &--secondary {
+    border: 1px solid #000;
+    background: none;
+    margin-bottom: 10rem;
+  }
+  &--primary {
+    background-color: rgba($btn-color, 0.6);
+  }
+  &--tertiary {
+    background: $primary;
+    color: white;
+  }
+}

@@ -1,0 +1,193 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 0;
+  background: $bg-color;
+
+  &__photo {
+    width: 22rem;
+  }
+  &__text {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    width: 45rem;
+  }
+}
+
+.features {
+  padding: 5rem 15rem;
+  background: $bg-color-light;
+
+  display: grid;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: start;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem 5rem;
+    display: grid;
+    grid-gap: 3.5rem;
+    align-items: start;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.services {
+  @include twoRow;
+  padding: 10rem 15rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 10rem 7rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 5rem;
+  }
+
+  &--light {
+    background: $bg-color-light;
+  }
+  &--dark {
+    background: $bg-color;
+  }
+
+  &__photo {
+    width: 100%;
+    @media only screen and (max-width: $bp-medium) {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}
+
+.testimonials {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  background: $bg-color-light;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    text-align: left;
+    padding: 5rem;
+  }
+
+  &__photo {
+    width: 70rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 40rem;
+    }
+  }
+
+  &__quote {
+    margin-bottom: 0.6rem;
+    font-size: 1.7rem;
+    font-family: $secondary-font;
+    font-weight: 400;
+    color: $quote-color;
+  }
+  &__author {
+    font-size: 1.3rem;
+    color: $author-color;
+    font-family: $secondary-font;
+  }
+  .testimonial:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+.adv-features {
+  background: $bg-color;
+  text-align: center;
+  padding: 5rem 20rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: $bg-color-light;
+    text-align: left;
+    grid-gap: 3rem;
+    padding: 5rem;
+    text-align: left;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: 1fr;
+
+      [class^="col"]:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  &__sub-text {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    color: rgba($primary, 0.5);
+    font-family: $secondary-font;
+  }
+  &__form {
+    text-align: center;
+    display: inline-block;
+  }
+  &__input {
+    width: 100%;
+    border: 1px solid #000;
+    background: transparent;
+    outline: none;
+
+    padding: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    ::placeholder {
+      font-family: $secondary-font;
+      color: #6c6fa4;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.footer {
+  padding: 5rem;
+  display: grid;
+  justify-items: center;
+  background: $bg-color-light;
+  &__heading-2 {
+    margin-left: -2rem;
+  }
+  &__photo {
+    width: 6.5rem;
+  }
+  &__link:link,
+  &__link:visited {
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+  }
+  &__copyright {
+    margin: 1.7rem 0;
+    color: $copyright;
+    letter-spacing: 0.05rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: $bp-smallest) {
+  .curl {
+    width: 20rem;
+  }
+}
