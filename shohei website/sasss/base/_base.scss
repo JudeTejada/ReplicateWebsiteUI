@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --primary: #333333;
+}
+$mobile: 56.25em;
+$tablet: 31.25em;
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 50%;
+  }
+}
+body {
+  color: var(--primary);
+  background: #fdfffc;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--primary);
+}

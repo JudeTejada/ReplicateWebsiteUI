@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem 1rem 2rem;
+  width: 100%;
+  background: #fff;
+  z-index: 9998;
+
+  @media only screen and (max-width: $mobile) {
+    position: fixed;
+  }
+
+  &__ul {
+    list-style: none;
+    display: flex;
+    padding-top: 2.1rem;
+    padding-right: 2.3rem;
+
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+      display: none;
+    }
+  }
+  &__item {
+    padding: 0 2rem;
+
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+}
